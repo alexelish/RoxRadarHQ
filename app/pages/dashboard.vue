@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { DASHBOARD_CARDS } from '~/consts/cards'
 </script>
 
 <template>
@@ -8,9 +7,9 @@ import { DASHBOARD_CARDS } from '~/consts/cards'
       <div>
         <header class="flex items-center justify-between w-full h-16 gap-4">
           <div class="flex gap-4">
-            <ClerkLogo />
-            <div aria-hidden class="w-px h-6 bg-[#C7C7C8]" />
-            <NuxtLogo />
+            <NuxtLink to="/">
+              <NuxtImg src="/images/RRlogo.png" alt="RoxRadarHQ" class="object-contain" />
+            </NuxtLink>
           </div>
           <div class="flex items-center gap-2">
             <OrganizationSwitcher
@@ -26,7 +25,6 @@ import { DASHBOARD_CARDS } from '~/consts/cards'
                   userButtonAvatarBox: 'size-6',
                 },
               }"
-              default-close
             />
           </div>
         </header>
@@ -37,6 +35,4 @@ import { DASHBOARD_CARDS } from '~/consts/cards'
       </div>
     </div>
   </main>
-  <LearnMore :cards="DASHBOARD_CARDS" />
-  <Footer />
 </template>
